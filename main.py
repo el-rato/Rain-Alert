@@ -8,8 +8,8 @@ OWM_endpoint = "https://api.openweathermap.org/data/2.5/forecast"
 api_key = os.environ.get("OWM_API_KEY")
 account_sid = os.environ.get("TWILIO_ACCOUNT_SID")
 auth_token = os.environ.get("TWILIO_AUTH_TOKEN")
-my_lat = 23.20
-my_long = 77.0
+my_lat = LAT
+my_long = LONG
 params = {
     "lat": my_lat,
     "lon": my_long,
@@ -35,4 +35,5 @@ if is_rain == True:
         from_="twilio phone number",
         to= "intended Phone number"
     )
+
 print(message.sid)
